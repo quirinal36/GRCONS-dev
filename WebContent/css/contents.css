@@ -7,6 +7,8 @@
 .tit2 { width: 1000px; margin: 0 auto 25px auto; }
 .tit2 h4 { font-size: 20px; }
 
+.slider1_wrap {  }
+
 .section1 { width: 1000px; margin: 0 auto 100px auto; font-size: 0; }
 .section1 > div { display: inline-block; vertical-align: top; }
 .section1 > div.left { width: 650px; }
@@ -62,6 +64,27 @@
 .section7 > ul > li > input[type="button"] { width: 100%; height: 270px; background: #ddd; font-size: 17px; }
 .section7 > ul > li > span { display: block; margin: 20px auto 0 auto; font-size: 17px; }
 
+/* 실적 표 */
 .record { width: 1000px; margin: 0 auto 100px auto; }
 .record tbody tr td:nth-child(3) { text-align: left; }
 .record tbody tr td:last-child { text-align: right; }
+
+.section8 { width: 1000px; margin: 0 auto; }
+.section8 .slider1 > div { width: 100%; height: 563px; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; text-indent: -1000px; overflow: hidden; }
+.dismantle1 { background-image: url(/img/business/dismantle1.jpg); }
+.dismantle2 { background-image: url(/img/business/dismantle2.jpg); }
+.dismantle3 { background-image: url(/img/business/dismantle3.jpg); }
+.dismantle4 { background-image: url(/img/business/dismantle4.jpg); }
+.dismantle5 { background-image: url(/img/business/dismantle5.jpg); }
+.dismantle6 { background-image: url(/img/business/dismantle6.jpg); }
+.dismantle7 { background-image: url(/img/business/dismantle7.jpg); }
+.dismantle8 { background-image: url(/img/business/dismantle8.jpg); }
+.dismantle9 { background-image: url(/img/business/dismantle9.jpg); }
+.dismantle10 { background-image: url(/img/business/dismantle10.jpg); }
+.dismantle11 { background-image: url(/img/business/dismantle11.jpg); }
+.dismantle12 { background-image: url(/img/business/dismantle12.jpg); }
+.dismantle13 { background-image: url(/img/business/dismantle13.jpg); }
+.dismantle14 { background-image: url(/img/business/dismantle14.jpg); }
+.dismantle15 { background-image: url(/img/business/dismantle15.jpg); }
+.dismantle16 { background-image: url(/img/business/dismantle16.jpg); }
+.dismantle17 { background-image: url(/img/business/dismantle17.jpg); }
