@@ -91,7 +91,9 @@ List<Board> list = control.getBoardList(board);
                     <c:forEach begin="1" end="${board.endPageNo }" varStatus="status">
                         <a href="javascript:movePage('${status.index }')" class="fc-blue board-list-page-num<c:if test="${pageNum == status.index}">-on</c:if>">${status.index}</a>
                     </c:forEach>
-                    <input type="button" value="글쓰기" onclick="javascript:window.location.href='<c:url value='/board/write.jsp'/>'" class="bt1 board_bt_write">
+                    <c:if test="${sessionLogin.id gt 0}">
+                    	<input type="button" value="글쓰기" onclick="javascript:window.location.href='<c:url value='/community/notice_write.jsp'/>'" class="bt1 board_bt_write">
+                    </c:if>
                 </div>
                 <div class="board_search">
                     <form action="<c:url value="/board/list.jsp"/>">
