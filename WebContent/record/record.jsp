@@ -12,7 +12,10 @@
     <div id="container_wrap">
         <div id="container">
             <div id="contents_top" class="contents_top1">
-                <h2>공사실적</h2>
+                <div>
+                    <h2>공사실적</h2>
+                    <span>Construction performance</span>
+                </div>
             </div>
             <div id="tit1">
                 <h3>공사실적</h3>
@@ -20,10 +23,10 @@
             <div class="record">
                 <table class="tbl1">
                     <colgroup>
-                        <col width="14%">
+                        <col width="12%">
                         <col width="22%">
                         <col width="50%">
-                        <col width="14%">
+                        <col width="16%">
                     </colgroup>
                     <thead>
                         <tr>

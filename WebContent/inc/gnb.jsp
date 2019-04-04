@@ -39,9 +39,10 @@ $(function(){
             </ul>
         </li>
         <li>
-            <a href="/ask/ask.jsp">문의하기</a>
+            <a href="/community/ask.jsp">커뮤니티</a>
             <ul>
-                <li><a href="/ask/ask.jsp">문의하기</a></li>
+                <li><a href="/community/notice.jsp">공지사항</a></li>
+                <li><a href="/community/ask.jsp">문의하기</a></li>
             </ul>
         </li>
     </ul>

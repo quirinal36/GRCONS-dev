@@ -5,6 +5,15 @@
 <head>
     <c:import url="/inc/head.jsp"></c:import>
     <link rel="stylesheet" type="text/css" href="/css/contents.css" media="all" />
+    <script type="text/javascript">
+        $(function(){
+          $('.slider1').bxSlider({
+            mode: "fade",
+            pager: false,
+            captions: true
+          });
+        });
+    </script>
 </head>
 <body>
 <div id="wrap">
@@ -12,30 +21,24 @@
     <div id="container_wrap">
         <div id="container">
             <div id="contents_top" class="contents_top1">
-                <h2>사업안내</h2>
+                <div>
+                    <h2>사업안내</h2>
+                    <span>Business</span>
+                </div>
             </div>
             <div id="tit1"> 
                 <h3>철거</h3>
+                <p>숙련된 인력과 최신 장비를 보유하고 있으며 오랜 철거 경험으로 전문성 있는 공사가 가능합니다.</p>
             </div>
             <div class="slider1_wrap section8">
                 <div class="slider1">
-                    <div class="dismantle1">공사사진</div>
-                    <div class="dismantle2">공사사진</div>
-                    <div class="dismantle3">공사사진</div>
-                    <div class="dismantle4">공사사진</div>
-                    <div class="dismantle5">공사사진</div>
-                    <div class="dismantle6">공사사진</div>
-                    <div class="dismantle7">공사사진</div>
-                    <div class="dismantle8">공사사진</div>
-                    <div class="dismantle9">공사사진</div>
-                    <div class="dismantle10">공사사진</div>
-                    <div class="dismantle11">공사사진</div>
-                    <div class="dismantle12">공사사진</div>
-                    <div class="dismantle13">공사사진</div>
-                    <div class="dismantle14">공사사진</div>
-                    <div class="dismantle15">공사사진</div>
-                    <div class="dismantle16">공사사진</div>
-                    <div class="dismantle17">공사사진</div>
+                    <div><img src="/img/business/dismantle1.png"></div>
+                    <div><img src="/img/business/dismantle2.png"></div>
+                    <div><img src="/img/business/dismantle3.png"></div>
+                    <div><img src="/img/business/dismantle4.png"></div>
+                    <div><img src="/img/business/dismantle5.png"></div>
+                    <div><img src="/img/business/dismantle6.png"></div>
+                    <div><img src="/img/business/dismantle7.png"></div>
                 </div>
             </div>
         </div>

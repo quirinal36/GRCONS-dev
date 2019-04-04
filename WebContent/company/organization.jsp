@@ -12,12 +12,15 @@
     <div id="container_wrap">
         <div id="container">
             <div id="contents_top" class="contents_top1">
-                <h2>회사소개</h2>
+                <div>
+                    <h2>회사소개</h2>
+                    <span>Introduction</span>
+                </div>
             </div>
             <div id="tit1">
                 <h3>조직도</h3>
             </div>
-            <img src="/img/contents/organization.gif" alt="조직도" style="display: block; margin: 0 auto 100px auto;">
+            <img src="/img/contents/organization.png" alt="조직도" style="display: block; margin: 0 auto 100px auto;">
         </div>
     </div>
     <c:import url="/inc/footer.jsp"></c:import>

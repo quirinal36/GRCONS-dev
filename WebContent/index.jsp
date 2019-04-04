@@ -18,42 +18,36 @@
                     <a href="/company/greet.jsp">대표 인사말</a>
                 </div>
             </div>
-<style>
-#idxG { width: 100%; min-width: 1000px; max-width: 1400px; margin: 80px auto; text-align: center; font-size: 0; }
-#idxG > div { display: inline-block; width: 30%; margin-left: 5%; text-align: center; }
-#idxG > div:first-child { margin-left: 0; }
-#idxG > div > img { display: block; width: 100%; border-radius: 10px; opacity: 0.3; }
-#idxG > div > strong { display: block; margin: 40px auto 20px auto; font-size: 30px; font-weight: 800; }
-#idxG > div > p { font-size: 16px; line-height: 160%; }
-#idxG > div > a { display: block; width: 120px; margin: 20px auto 0 auto; padding: 12px 0; border: 1px solid #ddd; font-size: 16px; }
-</style>
-            <div id="idxG">
+            <div id="idxB">
+                <strong>사업안내</strong>
                 <div>
-                    <img src="/img/index/idxB1.png" alt="건설">
-                    <strong>건설</strong>
-                    <p>
-                        고객의 이익을 먼저 생각하고<br>
-                        기본과 원칙을 준수하고 있습니다.
-                    </p>
-                    <a href="/business/construction.jsp">더 보기</a>
-                </div>
-                <div>
-                    <img src="/img/index/idxB1.png" alt="폐기물">
-                    <strong>폐기물</strong>
-                    <p>
-                        고객의 이익을 먼저 생각하고<br>
-                        기본과 원칙을 준수하고 있습니다.
-                    </p>
-                    <a href="/business/waste.jsp">더 보기</a>
-                </div>
-                <div>
-                    <img src="/img/index/idxB1.png" alt="철거">
-                    <strong>철거</strong>
-                    <p>
-                        고객의 이익을 먼저 생각하고<br>
-                        기본과 원칙을 준수하고 있습니다.
-                    </p>
-                    <a href="/business/dismantle.jsp">더 보기</a>
+                    <div>
+                        <img src="/img/index/idxB1.png" alt="건설">
+                        <strong>건설</strong>
+                        <p>
+                            설계부터 입주까지 세심한 노력을 기울여<br>
+                            아름답고 안전한 공간을 창조합니다.
+                        </p>
+                        <a href="/business/construction.jsp">더 보기 +</a>
+                    </div>
+                    <div>
+                        <img src="/img/index/idxB2.png" alt="폐기물">
+                        <strong>폐기물</strong>
+                        <p>
+                            계룡건설 주식회사는 건설폐기물을<br>
+                            수집 및 운반하는 정식허가업체입니다.
+                        </p>
+                        <a href="/business/waste.jsp">더 보기 +</a>
+                    </div>
+                    <div>
+                        <img src="/img/index/idxB3.png" alt="철거">
+                        <strong>철거</strong>
+                        <p>
+                            숙련된 인력과 최신 장비를 보유하고 있으며<br>
+                            오랜 철거 경험으로 전문성 있는 공사가 가능합니다.
+                        </p>
+                        <a href="/business/dismantle.jsp">더 보기 +</a>
+                    </div>
                 </div>
             </div>
             <div id="idxC">
