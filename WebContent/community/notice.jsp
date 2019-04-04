@@ -38,7 +38,7 @@ List<Board> list = control.getBoardList(board);
     <c:import url="/inc/header.jsp"></c:import>
     <div id="container_wrap">
         <div id="container">
-            <div id="contents_top" class="contents_top1">
+            <div id="contents_top" class="contents_top4">
                 <div>
                     <h2>커뮤니티</h2>
                     <span>Community</span>

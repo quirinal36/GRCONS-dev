@@ -11,7 +11,7 @@
     <c:import url="/inc/header.jsp"></c:import>
     <div id="container_wrap">
         <div id="container">
-            <div id="contents_top" class="contents_top1">
+            <div id="contents_top" class="contents_top3">
                 <div>
                     <h2>공사실적</h2>
                     <span>Construction performance</span>
@@ -238,6 +238,7 @@
                     </tbody>
                 </table>
             </div>
+            <c:import url="/inc/ask.jsp"></c:import>
         </div>
     </div>
     <c:import url="/inc/footer.jsp"></c:import>

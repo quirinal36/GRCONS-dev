@@ -5,6 +5,15 @@
 <head>
     <c:import url="/inc/head.jsp"></c:import>
     <link rel="stylesheet" type="text/css" href="/css/index.css" media="all" />
+    <script type="text/javascript">
+        $(function(){
+          $('.idxA_slide').bxSlider({
+            mode: "fade",
+            controls: false,
+            pager: true
+          });
+        });
+    </script>
 </head>
 <body>
 <div id="wrap">
@@ -12,10 +21,22 @@
     <div id="container_wrap">
         <div id="container">
             <div id="idxA">
-                <div>
-                    <p class="p1">귀사의 가치와 명예를 위해 새벽을 여는 사람들!</p>
-                    <p class="p2">계룡건설㈜이 함께하겠습니다.</p>
-                    <a href="/company/greet.jsp">대표 인사말</a>
+                <div class="idxA_slide">
+                    <div class="idxA1">
+                        <p class="p1">귀사의 가치와 명예를 위해 새벽을 여는 사람들!</p>
+                        <p class="p2">계룡건설㈜이 함께하겠습니다.</p>
+                        <a href="/company/greet.jsp" class="idxA_bt">대표 인사말</a>
+                    </div>
+                    <div class="idxA2">
+                        <p class="p1">귀사의 가치와 명예를 위해 새벽을 여는 사람들!</p>
+                        <p class="p2">계룡건설㈜이 함께하겠습니다.</p>
+                        <a href="/company/greet.jsp" class="idxA_bt">대표 인사말</a>
+                    </div>
+                    <div class="idxA3">
+                        <p class="p1">귀사의 가치와 명예를 위해 새벽을 여는 사람들!</p>
+                        <p class="p2">계룡건설㈜이 함께하겠습니다.</p>
+                        <a href="/company/greet.jsp" class="idxA_bt">대표 인사말</a>
+                    </div>
                 </div>
             </div>
             <div id="idxB">
@@ -55,7 +76,7 @@
                 <a href="/business/equipment.jsp">보유장비</a>
                 <a href="/business/certification.jsp">허가·인증</a>
                 <a href="/record/record.jsp">공사실적</a>
-                <a href="/ask/ask.jsp">문의하기</a>
+                <a href="/community/ask.jsp">문의하기</a>
             </div>
         </div>
     </div>

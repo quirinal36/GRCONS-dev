@@ -20,7 +20,7 @@
     <c:import url="/inc/header.jsp"></c:import>
     <div id="container_wrap">
         <div id="container">
-            <div id="contents_top" class="contents_top1">
+            <div id="contents_top" class="contents_top2">
                 <div>
                     <h2>사업안내</h2>
                     <span>Business</span>
@@ -38,6 +38,10 @@
                     <div><img src="/img/business/cons4.png" title="화산 수락 주택 신축공사"></div>
                 </div>
             </div>
+            <div class="section9">
+                <a href="/record/record.jsp">공사실적 더 보기 +</a>
+            </div>
+            <c:import url="/inc/ask.jsp"></c:import>
         </div>
     </div>
     <c:import url="/inc/footer.jsp"></c:import>
