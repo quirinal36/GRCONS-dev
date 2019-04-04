@@ -1,5 +1,8 @@
 package kr.co.grcons.vo;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
 public class Users {
 	private int id;
 	private String login;
@@ -46,5 +49,8 @@ public class Users {
 		this.phone = phone;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return ToStringBuilder.reflectionToString(this, ToStringStyle.JSON_STYLE);
+	}
 }

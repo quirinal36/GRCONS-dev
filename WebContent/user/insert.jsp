@@ -9,16 +9,4 @@ user.setLogin("LOGIN");
 user.setPassword("password");
 user.setUsername("username");
 user.setPhone("phone");
-
-int result = controller.insertUser(user);
 %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-${result}
-</body>
-</html>

@@ -13,7 +13,7 @@ public class DBconn {
 	private String password 	= "gudrn!@09";
 	private String dbms 		= "mysql";
 	private String dbName 		= "turboguy";
-	private String serverName 	= "localhost";
+	private String serverName 	= "turboguy.cafe24.com";
 	private int portNumber 		= 3306;
 	
 	public Connection getConnection() throws SQLException {

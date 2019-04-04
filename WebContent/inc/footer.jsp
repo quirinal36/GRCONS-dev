@@ -1,5 +1,31 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+function formSubmit(){
+	var param = "login="+$("input[name='login']").val();
+	param = param +"&password="+$("input[name='password']").val();
+	
+	$.ajax({
+		type : "POST",
+		url  : "/user/login.jsp",
+		data : param,
+		success : function(result){
+			console.log("result:"+ result);
+			var json = JSON.parse(result);
+			if(json.result > 0){
+				$(".popup_login").fadeOut();
+				window.location.href = $("input[name='url']").val();
+			}else{
+				$(".error").show();
+			}
+		},error: function(data, status){
+			console.log("error: "+data);
+		}
+	});
+}
+</script>
 <div id="footer">
     <ul>
         <li>대표 : 하재일</li>
@@ -19,11 +45,11 @@
     <div class="view">
         <input type="button" value="닫기" class="popup_close">
         <strong>로그인</strong>
-        <form>
-            <input type="text" placeholder="아이디를 입력하세요.">
-            <input type="password" placeholder="비밀번호를 입력하세요.">
-            <!--<p class="error">아이디 또는 비밀번호를 확인해주세요.</p>-->
-            <input type="submit" value="로그인">
-        </form>
+        
+            <input type="text" name="login" placeholder="아이디를 입력하세요.">
+            <input type="password" name="password" placeholder="비밀번호를 입력하세요.">
+            <p class="error" style="display:none;">아이디 또는 비밀번호를 확인해주세요.</p>
+            <input type="submit" value="로그인" onclick="javascript:formSubmit();">
+        	<input type="hidden" value="${pageContext.request.requestURL }" name="url"/>
     </div>
 </div>
