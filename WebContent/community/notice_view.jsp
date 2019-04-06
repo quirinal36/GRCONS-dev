@@ -17,6 +17,7 @@ logger.info(board.toString());
 <head>
     <c:import url="/inc/head.jsp"></c:import>
     <link rel="stylesheet" type="text/css" href="/css/contents.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/ckeditor/contents.css" media="all" />
 </head>
 <body>
 <div id="wrap">
@@ -52,7 +53,7 @@ logger.info(board.toString());
                                 <th>날짜</th>
                                 <td>${board.wdate }</td>
                             </tr>
-                            <tr>
+                            <tr class="cke_contents_ltr">
                                 <td colspan="4" class="cont">${board.content }</td>
                             </tr>
                         </tbody>
