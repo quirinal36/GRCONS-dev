@@ -1,7 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <script type="text/javascript">
-
+$(document).ready(function(){
+	$("input").keyup(function(event){
+		// console.log("key: " + event.which);
+		if(event.which == 13){
+			formSubmit();
+		}
+	});
+});
 function formSubmit(){
 	var param = "login="+$("input[name='login']").val();
 	param = param +"&password="+$("input[name='password']").val();

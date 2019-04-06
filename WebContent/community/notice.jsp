@@ -72,11 +72,11 @@ List<Board> list = control.getBoardList(board);
                             </tr>
                         </thead>
                         <tbody>
-                        <c:forEach items="${list }" var="item">
+                        <c:forEach items="${list }" var="item" varStatus="sts">
                             <tr>
                                 <td>${item.id}</td>
                                 <td>
-                                    <a href="<c:url value="/board/detail.jsp?id=${item.id}"/>">
+                                    <a href="<c:url value="/community/notice_view.jsp?id=${item.id}"/>">
                                         ${item.title}
                                     </a>
                                 </td>
