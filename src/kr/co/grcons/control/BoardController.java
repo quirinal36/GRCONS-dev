@@ -14,6 +14,45 @@ import kr.co.grcons.vo.Board;
 public class BoardController {
 	private final Logger logger = Logger.getLogger(getClass().getSimpleName());
 	
+	public int updateBoard(Board board) {
+		int result = 0;
+		try(Connection conn = new DBconn().getConnection()){
+			StringBuilder sql = new StringBuilder();
+			sql.append("UPDATE Board ")
+				.append("SET ")
+				.append("title=?,")
+				.append("content=? ")
+				.append("WHERE id =?");
+						
+			PreparedStatement pstmt = conn.prepareStatement(sql.toString());
+			
+			int i = 1;
+			pstmt.setString(i++, board.getTitle());
+			pstmt.setString(i++, board.getContent());
+			pstmt.setInt(i++, board.getId());
+			result = pstmt.executeUpdate();
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	public int deleteBoard(Board board) {
+		int result = 0;
+		try(Connection conn = new DBconn().getConnection()){
+			StringBuilder sql = new StringBuilder();
+			sql.append("DELETE FROM Board ")
+				.append("WHERE id = ?");
+			PreparedStatement pstmt = conn.prepareStatement(sql.toString());
+			
+			int i = 1;
+			pstmt.setInt(i++, board.getId());
+			logger.info(pstmt.toString());
+			result = pstmt.executeUpdate();
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
 	public int insertBoard(Board board) {
 		int result = 0;
 		try(Connection conn = new DBconn().getConnection()){
@@ -28,7 +67,7 @@ public class BoardController {
 			pstmt.setString(i++, board.getTitle());
 			pstmt.setInt(i++, board.getWriter());
 			pstmt.setString(i++, board.getContent());
-			logger.info(pstmt.toString());
+//			logger.info(pstmt.toString());
 			result = pstmt.executeUpdate();
 		}catch(SQLException e) {
 			e.printStackTrace();
@@ -63,7 +102,7 @@ public class BoardController {
 			PreparedStatement pstmt = conn.prepareStatement(sql.toString());
 			pstmt.setInt(i, input.getId());
 			
-			logger.info(pstmt.toString());
+//			logger.info(pstmt.toString());
 			
 			ResultSet rs = pstmt.executeQuery();
 			while(rs.next()) {

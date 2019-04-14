@@ -9,7 +9,6 @@ Board input = new Board(boardId);
 BoardController controller = new BoardController();
 Board board = controller.getBoard(input);
 Logger logger = Logger.getLogger("notice_view.jsp");
-logger.info(board.toString());
 %>
 <c:set var="board" value="<%=board%>"></c:set>
 <!DOCTYPE html>
@@ -18,6 +17,41 @@ logger.info(board.toString());
     <c:import url="/inc/head.jsp"></c:import>
     <link rel="stylesheet" type="text/css" href="/css/contents.css" media="all" />
     <link rel="stylesheet" type="text/css" href="/ckeditor/contents.css" media="all" />
+	<script src="<c:url value="/js/sweetalert2.all.min.js"/>"></script>
+	<script type="text/javascript">
+	function deleteBoard(id){
+		var param = "id="+id;
+		swal({
+			text : "정말 삭제하시겠습니까?",
+			showCancelButton: true,
+			focusConfirm: true,
+			confirmButtonText: '네',
+			cancelButtonText:'취소',
+			animation: false
+		}).then(function(result){
+			if(result.value){
+				$.ajax({
+					type:"POST",
+					url :$("input[name='deleteUrl']").val(),
+					data: param,
+					success : function(deleteResult){
+						console.log(deleteResult);
+						
+						var json = JSON.parse(deleteResult);
+						console.log(json);
+						if(json.result > 0){
+							swal({
+								text : "삭제되었습니다."
+							}).then(function(result){
+								window.location.href="/community/notice.jsp";
+							});
+						}
+					}
+				});
+			}
+		});
+	}
+	</script>
 </head>
 <body>
 <div id="wrap">
@@ -58,7 +92,12 @@ logger.info(board.toString());
                             </tr>
                         </tbody>
                     </table>
-                    <div class="board_view_bottom"><a href="<c:url value="/community/notice.jsp"/>" class="bt1 board_bt_list">목록</a></div>
+                    <div class="board_view_bottom">
+                    <input type="hidden" name="deleteUrl" value="<c:url value="/board/delete/action"/>">
+                    <a href="<c:url value="/community/notice_modify.jsp"><c:param name="id" value="${board.id }"/></c:url>" class="bt1 board_bt_list">수정</a>
+                    <a href="javascript:deleteBoard('${board.id }')" class="bt1 board_bt_list">삭제</a>
+                    <a href="<c:url value="/community/notice.jsp"/>" class="bt1 board_bt_list">목록</a>
+                    </div>
                 </div>
             </div>
         </div>
