@@ -19,13 +19,12 @@ $(function(){
                 <li><a href="/company/greet.jsp">대표 인사말</a></li>
                 <li><a href="/company/location.jsp">오시는 길</a></li>
                 <li><a href="/company/organization.jsp">조직도</a></li>
-                <li><a href="/company/subsidiary.jsp">자회사 소개</a></li>
             </ul>
         </li>
         <li>
             <a href="/business/construction.jsp">사업안내</a>
             <ul>
-                <li><a href="/business/construction.jsp">건설</a></li>
+                <li><a href="/business/construction.jsp">건축</a></li>
                 <li><a href="/business/waste.jsp">폐기물</a></li>
                 <li><a href="/business/dismantle.jsp">철거</a></li>
                 <li><a href="/business/equipment.jsp">보유장비</a></li>
@@ -33,16 +32,18 @@ $(function(){
             </ul>
         </li>
         <li>
-            <a href="/record/record.jsp">공사실적</a>
+            <a href="/record/construction.jsp">공사실적</a>
             <ul>
-                <li><a href="/record/record.jsp">공사실적</a></li>
+                <li><a href="/record/construction.jsp">건축</a></li>
+                <li><a href="/record/waste.jsp">폐기물</a></li>
+                <li><a href="/record/dismantle.jsp">철거</a></li>
             </ul>
         </li>
         <li>
             <a href="/community/ask.jsp">커뮤니티</a>
             <ul>
                 <li><a href="/community/notice.jsp">공지사항</a></li>
-                <li><a href="/community/ask.jsp">문의하기</a></li>
+                <li><a href="/community/ask.jsp">견적문의</a></li>
             </ul>
         </li>
     </ul>

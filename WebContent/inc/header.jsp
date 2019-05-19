@@ -11,7 +11,7 @@
     });
 </script>
 <div id="header">
-    <h1><a href="/"><img src="/img/comm/logo.png" alt="계룡건설 주식회사"></a></h1>
+    <h1><a href="/"><img src="/img/comm/logo.gif" alt="계룡건설 주식회사"></a></h1>
     <c:import url="/inc/gnb.jsp"></c:import>
     <div id="header_link">
     	<c:choose>

@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div id="tit1"> 
-                <h3>건설</h3>
+                <h3>건축</h3>
                 <p>설계부터 입주까지 세심한 노력을 기울여 아름답고 안전한 공간을 창조합니다.</p>
             </div>
             <div class="slider1_wrap section8">

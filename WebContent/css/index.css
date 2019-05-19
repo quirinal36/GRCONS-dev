@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo');
+
 #idxA { width: 100%; height: 560px; text-align: center; }
 .idxA_slide { width: 100%; height: 560px; }
 .idxA1, .idxA2, .idxA3 { width: 100%; height: 100%; background-size: cover; background-repeat: no-repeat; background-position: 50% 70%; }
@@ -28,3 +30,37 @@
 #idxC a:nth-child(3) { background-image: url(/img/index/idxC3.png); }
 #idxC a:nth-child(4) { background-image: url(/img/index/idxC4.png); }
 #idxC a:nth-child(5) { background-image: url(/img/index/idxC5.png); }
+
+#idxD { position: relative; width: 100%; min-width: 1000px; max-width: 1400px; margin: 0 auto 80px auto; padding: 50px 0; background: #d7deeb url(/img/index/idxD_img.png) no-repeat 40px 100%; background-size: 400px; text-align: center; }
+#idxD strong { display: block; margin-bottom: 16px; font-size: 32px; font-weight: 800; letter-spacing: -1px; }
+#idxD a { display: inline-block; padding: 14px 20px; border: 1px solid #42445d; border-radius: 7px; font-size: 20px; font-weight: 600; letter-spacing: -0.5px; }
+#idxD a:first-child { margin-right: 5px; }
+#idxD .tel { position: absolute; top: 72px; right: 90px; padding: 16px 24px; background: #42445d; font-size: 24px; font-weight: 600; color: #fff; letter-spacing: -0.5px; }
+#idxD .tel span { font-family: 'Nanum Myeongjo', serif; font-style: italic; }
+@media all and (max-width: 1280px) {
+    #idxD { background-position-x: 20px; background-size: 330px; }
+    #idxD .tel { right: 20px; padding: 12px 16px; font-size: 23px; }
+}
+/*
+@media all and (max-width: 800px) {
+    #idxA { height: 250px; }
+    .idxA_slide { height: 250px; }
+    #idxA p { font-size: 1.8rem; }
+    #idxA p.p1 { margin: 76px 0 5px 0; }
+    #idxA p.p2 { margin-bottom: 20px; }
+    #idxA a.idxA_bt { padding: 8px 20px; background: none; font-size: 1.4rem; font-weight: 600; }
+    #idxA .bx-wrapper .bx-pager { display: none; }
+    #idxB { width: auto; min-width: auto; margin: 40px 0; }
+    #idxB > strong { margin-bottom: 20px; padding-bottom: 3px; font-size: 2.2rem; font-weight: 800; }
+    #idxB > strong::after { left: 0; margin-left: 0; width: 100%; }
+    #idxB > div { padding: 0 1rem; }
+    #idxB > div > div { display: block; width: 100%; margin: 40px 0 0 0; }
+    #idxB > div > div:first-child { margin-top: 0; }
+    #idxB > div > div > strong { margin: 20px auto 5px auto; font-size: 2.2rem; font-weight: 800; }
+    #idxB > div > div > p { font-size: 1.4rem; }
+    #idxB > div > div > a { display: inline-block; width: auto; margin-top: 10px; padding: 8px 20px; font-size: 1.4rem; }
+    #idxC { padding: 20px 0; }
+    #idxC a { width: 24%; padding-top: 50px; background-size: 48px; font-size: 1.4rem; letter-spacing: -0.5px; }
+    #idxC a::before { display: none; }
+    #idxC a:first-child { display: none; }
+}*/

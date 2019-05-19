@@ -43,8 +43,8 @@
                 <strong>사업안내</strong>
                 <div>
                     <div>
-                        <img src="/img/index/idxB1.png" alt="건설">
-                        <strong>건설</strong>
+                        <img src="/img/index/idxB1.png" alt="건축">
+                        <strong>건축</strong>
                         <p>
                             설계부터 입주까지 세심한 노력을 기울여<br>
                             아름답고 안전한 공간을 창조합니다.
@@ -71,12 +71,20 @@
                     </div>
                 </div>
             </div>
+            <div id="idxD">
+                <strong>건축공사 · 건설폐기물처리 · 철거공사</strong>
+                <div>
+                    <a href="/community/ask.jsp">온라인 견적문의</a>
+                    <a href="#">카카오톡 문의하기</a>
+                </div>
+                <div class="tel">문의전화 <span>063.834.8072</span></div>
+            </div>
             <div id="idxC">
                 <a href="/company/location.jsp">오시는 길</a>
                 <a href="/business/equipment.jsp">보유장비</a>
                 <a href="/business/certification.jsp">허가·인증</a>
                 <a href="/record/record.jsp">공사실적</a>
-                <a href="/community/ask.jsp">문의하기</a>
+                <a href="/community/ask.jsp">견적문의</a>
             </div>
         </div>
     </div>
