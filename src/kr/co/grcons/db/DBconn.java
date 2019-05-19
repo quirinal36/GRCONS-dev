@@ -13,6 +13,7 @@ public class DBconn {
 	private String password 	= "gudrn!@09";
 	private String dbms 		= "mysql";
 	private String dbName 		= "turboguy";
+	// private String serverName 	= "grcons.co.kr";
 	private String serverName 	= "localhost";
 	private int portNumber 		= 3306;
 	

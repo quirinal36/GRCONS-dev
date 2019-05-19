@@ -30,4 +30,5 @@
 <script src="<c:url value="/js/jquery.js"/>"></script>
 <script src="<c:url value="/js/jquery.bxslider.js"/>"></script>
 <script src="/js/popup.js"></script>
+<script src="<c:url value="/js/clientDetective.js"/>"></script>
 <link rel="stylesheet" type="text/css" href="/css/css.css" media="all" />
