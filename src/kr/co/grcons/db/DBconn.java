@@ -9,12 +9,13 @@ import java.util.logging.Logger;
 public class DBconn {
 	Logger logger = Logger.getLogger(DBconn.class.getSimpleName());
 	
-	private String userName 	= "turboguy";
-	private String password 	= "gudrn!@09";
+	private String userName 	= "dev-01";
+	private String password 	= "Jca142536!@";
 	private String dbms 		= "mysql";
-	private String dbName 		= "turboguy";
+	private String dbName 		= "grcons";
 	// private String serverName 	= "grcons.co.kr";
-	private String serverName 	= "localhost";
+	//private String serverName 	= "localhost";
+	private String serverName	= "aa16n2xkpj5nl66.cbqm3rfz7crw.ap-northeast-2.rds.amazonaws.com";
 	private int portNumber 		= 3306;
 	
 	public Connection getConnection() throws SQLException {
