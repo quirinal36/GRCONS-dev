@@ -28,57 +28,16 @@ $(function(){
             </div>
             <div id="tit1">
                 <h3>허가·인증</h3>
+                <input type="button" value="추가" onclick="window.location.replace('/business/certification/write.jsp')"/>
             </div>
             <div class="section7 certi_list">
                 <ul>
-                    <li>
-                        <input type="button" value="인증서" class="certi1">
-                        <span>계룡환경 사업자등록증</span>
-                    </li>
-                    <li>
-                        <input type="button" value="인증서" class="certi2">>
-                        <span>건설폐기물수집·운반업 허가증</span>
-                    </li>
-                    <li>
-                        <input type="button" value="인증서" class="certi3">>
-                        <span>화물자동차운송사업 허가증</span>
-                    </li>
-                    <li>
-                        <input type="button" value="인증서" class="certi4">>
-                        <span>계룡환경산업 사업자등록증</span>
-                    </li>
-                    <li>
-                        <input type="button" value="인증서" class="certi5">>
-                        <span>폐기물수집·운반업 허가증</span>
-                    </li>
-                    <li>
-                        <input type="button" value="인증서" class="certi6">>
-                        <span>화물자동차운송사업 허가증</span>
-                    </li>
-                    <li>
-                        <input type="button" value="인증서" class="certi7">>
-                        <span>비계·구조물해체공사업 등록증</span>
-                    </li>
-                    <li>
-                        <input type="button" value="인증서" class="certi8">>
-                        <span>석면해체·제거업자 등록증</span>
-                    </li>
-                    <li>
-                        <input type="button" value="인증서" class="certi9">>
-                        <span>석면해체·제거사업장 관리감독자 수료증 - 이창록</span>
-                    </li>
-                    <li>
-                        <input type="button" value="인증서" class="certi10">>
-                        <span>석면해체·제거 관리자<br> 수료증 - 이창록</span>
-                    </li>
-                    <li>
-                        <input type="button" value="인증서" class="certi11">>
-                        <span>석면해체·제거사업장 관리감독자 수료증 - 최성규</span>
-                    </li>
-                    <li>
-                        <input type="button" value="인증서" class="certi12">>
-                        <span>석면해체·제거 관리자<br> 수료증 - 최성규</span>
-                    </li>
+                	<%for(int i=0; i<5; i++) {%>
+	                    <li>
+	                        <img src="/img/business/certi1.png"  class="certi1"/>
+	                        <span>계룡환경 사업자등록증</span>
+	                    </li>
+                    <%} %>
                 </ul>
             </div>
             <c:import url="/inc/ask.jsp"></c:import>

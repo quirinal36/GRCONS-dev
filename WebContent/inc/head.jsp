@@ -27,7 +27,7 @@
 -->
 <meta name="format-detection" content="telephone=no,address=no,email=no">
 
-<script src="<c:url value="/js/jquery.js"/>"></script>
+<script src="<c:url value="/js/jquery-1.12.1.min.js"/>"></script>
 <script src="<c:url value="/js/jquery.bxslider.js"/>"></script>
 <script src="/js/popup.js"></script>
 <script src="<c:url value="/js/clientDetective.js"/>"></script>
