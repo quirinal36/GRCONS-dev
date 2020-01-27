@@ -21,21 +21,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.tomcat.util.http.fileupload.FileItem;
-import org.apache.tomcat.util.http.fileupload.IOUtils;
-import org.apache.tomcat.util.http.fileupload.disk.DiskFileItem;
 import org.imgscalr.Scalr;
-import org.json.JSONArray;
 import org.json.JSONObject;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
-import org.springframework.web.multipart.support.DefaultMultipartHttpServletRequest;
 
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 import kr.co.grcons.util.FileUtil;
-import kr.co.grcons.vo.FileInfo;
 import kr.co.grcons.vo.PhotoInfo;
 
 /**
@@ -57,13 +49,13 @@ public class UploadImage extends HttpServlet {
     	System.out.println("doget");
     }
     
-    @Override
+    
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+    @Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
     	response.setContentType("text/json; charset=UTF-8");
-    	PrintWriter out = response.getWriter();
 
     	String dir = getServletContext().getRealPath("/upload");
     	File dirs = new File(dir);
@@ -83,7 +75,6 @@ public class UploadImage extends HttpServlet {
 		Enumeration<?> files = request.getFileNames();
 		while(files.hasMoreElements()) {
 			String name = (String)files.nextElement();
-			String filename = request.getFilesystemName(name);
 			String originalName = request.getOriginalFileName(name);
 			String type = request.getContentType(name);
 			
@@ -122,17 +113,16 @@ public class UploadImage extends HttpServlet {
             result.put("file", new JSONObject(photo.toString()));
 		}
 		
+		PrintWriter out = response.getWriter();
 		out.append(result.toString());
 	}
+    
     public void fileCopy(File orgFile, File newFile) {
         if(orgFile.exists()) {
             orgFile.renameTo(newFile);
         }
     }
 
-    private String getWebappDir(HttpServletRequest request) {
-		return request.getContextPath();
-	}
     private File makeThumbnail(File originFile, String newFilenameBase)throws IOException{
 		// 저장된 원본파일로부터 BufferedImage 객체를 생성합니다.
 		// File originFile = new File(filePath);
