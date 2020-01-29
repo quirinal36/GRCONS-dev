@@ -56,13 +56,13 @@ public class UploadImage extends HttpServlet {
     @Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
     	response.setContentType("text/json; charset=UTF-8");
-
-    	String dir = getServletContext().getRealPath("/upload");
-    	File dirs = new File(dir);
+    	response.setCharacterEncoding("UTF-8");
+    	
+    	String dir = getServletContext().getRealPath("/upload");	// 폴더를 지정
+    	File dirs = new File(dir);									// 위 폴더가 없으면 새로 만들기
     	if(!dirs.exists()) {
     		dirs.mkdirs();
     	}
-    	response.setCharacterEncoding("UTF-8");
     	
     	MultipartRequest request = new MultipartRequest(
     			req,
@@ -78,21 +78,24 @@ public class UploadImage extends HttpServlet {
 			String originalName = request.getOriginalFileName(name);
 			String type = request.getContentType(name);
 			
-			File file = request.getFile(name);
+			File file = request.getFile(name);			// 처음 업로드된 파일
 			System.out.println(file.getAbsolutePath());
 			
-			String newFilenameBase = UUID.randomUUID().toString();
-            String originalFileExtension = originalName.substring(originalName.lastIndexOf("."));
-            String newFilename = newFilenameBase + originalFileExtension;
-            String srcPath = new FileUtil().makeUserPath();
+			String newFilenameBase = UUID.randomUUID().toString();	// 이름이 겹치지 않게 RandomUUID 만든다.
+            String originalFileExtension = originalName.substring(originalName.lastIndexOf("."));	// 파일 확장자명
+            String newFilename = newFilenameBase + originalFileExtension;	// RandomUUID + 확장자명
+            String srcPath = new FileUtil().makeUserPath();			// 저장할 장소
             
-            File newFile = new File(srcPath + "/" + newFilename);
+            File newFile = new File(srcPath + "/" + newFilename);		// 저장소에 새로 생성될 파일 (아직은 가짜)
             System.out.println(newFile.getAbsolutePath());
             
-            fileCopy(file, newFile);
+            fileCopy(file, newFile);		// 업로드된 파일을 새로운 저장소로 옮긴다.
             
-            File thumbnailFile = makeThumbnail(newFile, newFilenameBase);
+            File thumbnailFile = makeThumbnail(newFile, newFilenameBase);	// 썸네일 파일을 새로 만든다.
             
+            /**
+             * 데이터베이스에 저장할 파일정보
+             */
             PhotoInfo photo = new PhotoInfo();
             photo.setName(originalName);
             photo.setThumbnailFilename(thumbnailFile.getName());
@@ -106,10 +109,10 @@ public class UploadImage extends HttpServlet {
              * 
              * */
             
+            // ID 값이 생성된 후 정보를 셋팅해야한다.
             photo.setUrl("/upload/get/"+photo.getId());
             photo.setThumbnailUrl(req.getContextPath() + "/thumbnail/"+photo.getId());
             
-            file.delete();
             result.put("file", new JSONObject(photo.toString()));
 		}
 		
@@ -120,6 +123,7 @@ public class UploadImage extends HttpServlet {
     public void fileCopy(File orgFile, File newFile) {
         if(orgFile.exists()) {
             orgFile.renameTo(newFile);
+            orgFile.delete();
         }
     }
 

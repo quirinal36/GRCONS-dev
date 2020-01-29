@@ -20,6 +20,7 @@
             <div id="tit1">
                 <h3>폐기물</h3>
             </div>
+            <a href="/record/waste/write.jsp" >글작성</a>
             <div class="record">
                 <table class="tbl1">
                     <colgroup>
