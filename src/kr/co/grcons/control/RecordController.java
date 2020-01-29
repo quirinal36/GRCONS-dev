@@ -33,8 +33,7 @@ public class RecordController implements DataInterface<Waste>{
 			
 			ResultSet rs = pstmt.getGeneratedKeys();
 			while(rs.next()) {
-				int id = rs.getInt(1);
-				System.out.println("generated id : " + id);
+				result = rs.getInt(1);
 			}
 		}catch (Exception e) {
 			e.printStackTrace();

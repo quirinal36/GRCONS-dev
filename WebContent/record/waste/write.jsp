@@ -7,6 +7,28 @@
 <title>Insert title here</title>
 <c:import url="/inc/head.jsp"></c:import>
 <link rel="stylesheet" type="text/css" href="/css/contents.css" media="all" />
+<script type="text/javascript">
+function writeRecord(){
+	var url = $("form").attr("action");
+	var param = $("form").serialize();
+	
+	console.log(url);
+	console.log(param);
+	
+	$.ajax({
+		url : url,
+		data : param,
+		type : "POST",
+		dataType : "json"
+	}).done(function(json){
+		console.log("done");
+		console.log(json);
+	}).fail(function(msg){
+		console.log("fail");
+		console.log(msg);
+	});
+}
+</script>
 </head>
 <body>
 <div id="wrap">
@@ -65,6 +87,11 @@
 	            			<tr>
 	            				<td colspan="2">
 	            					<input type="submit" value="저장"/>
+	            				</td>
+	            			</tr>
+	            			<tr>
+	            				<td colspan="2">
+	            					<input type="button" value="전송" onclick="javascript:writeRecord();"/>
 	            				</td>
 	            			</tr>
 	            		</tfoot>

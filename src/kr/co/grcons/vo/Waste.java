@@ -2,6 +2,9 @@ package kr.co.grcons.vo;
 
 import java.sql.Date;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
 public class Waste {
 	int id;
 	String title;
@@ -52,7 +55,10 @@ public class Waste {
 	public void setUdate(Date udate) {
 		this.udate = udate;
 	}
-	
+	@Override
+	public String toString() {
+		return ToStringBuilder.reflectionToString(this, ToStringStyle.JSON_STYLE);
+	}
 	@Override
 	public Object clone() throws CloneNotSupportedException {
 		return super.clone();

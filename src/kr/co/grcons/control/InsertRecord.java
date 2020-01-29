@@ -46,15 +46,15 @@ public class InsertRecord extends HttpServlet {
 		waste.setTitle(title);
 		waste.setBudget(Integer.parseInt(budget));
 		
-		/*
 		RecordController control = new RecordController();
-		int result = control.insert(waste);
+		int insertedId = control.insert(waste);
 		
 		response.setContentType("text/html; charset=utf-8;");
-		if(result > 0) {
-			response.getWriter().append("글 저장에 성공했습니다.");
+		if(insertedId > 0) {
+			waste.setId(insertedId);
+			response.getWriter().append(waste.toString());
+			// response.getWriter().append("글 저장에 성공했습니다.");
 		}
-		*/
 	}
 
 }
